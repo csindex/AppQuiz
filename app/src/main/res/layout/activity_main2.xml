@@ -13,9 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lines="1"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textColor="@color/baby_squid_red"
+        android:textSize="24sp" />
 
     <TextView
         android:layout_marginBottom="22sp"
@@ -23,8 +22,9 @@
         android:layout_height="wrap_content"
         android:lines="1"
         android:text="Hello, welcome to our class!"
-        android:textColor="@color/black"
-        android:textSize="22sp" />
+        android:textColor="@color/baby_squid_red"
+        android:textSize="22sp"
+        android:fontFamily="@font/bbg"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -56,7 +56,8 @@
                     android:layout_height="wrap_content"
                     android:text="Learn about alphabets, numbers, and senses."
                     android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:fontFamily="@font/bbg"/>
             </LinearLayout>
 
             <LinearLayout
@@ -80,7 +81,8 @@
                     android:layout_height="wrap_content"
                     android:text="Test about what you have learned on the previous lectures."
                     android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:fontFamily="@font/bbg" />
             </LinearLayout>
 
             <LinearLayout
@@ -104,10 +106,11 @@
                     android:layout_height="wrap_content"
                     android:text="View your scores from the quiz that you have taken."
                     android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:fontFamily="@font/bbg" />
             </LinearLayout>
 
-            <LinearLayout
+            <!--<LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
@@ -129,7 +132,8 @@
                     android:text="View your profile."
                     android:textColor="@color/white"
                     android:textSize="24sp" />
-            </LinearLayout>
+            </LinearLayout>-->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -151,7 +155,8 @@
                     android:layout_height="wrap_content"
                     android:text="Access online dictionary using Dictionary API."
                     android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:fontFamily="@font/bbg" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

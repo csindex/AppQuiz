@@ -7,5 +7,7 @@
     <string name="description">Description</string>
     <string name="title">Title</string>
     <string name="back">back</string>
+    <string name="label_welcome">Welcome\nto\nSquids\nGame</string>
+    <string name="btn_label_start">Start</string>
 
 </resources>

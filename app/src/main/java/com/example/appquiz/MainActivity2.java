@@ -31,7 +31,7 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         tvName = findViewById(R.id.tvName);
-        tvName.setText("Sample Name");
+        tvName.setText("Young Einstein");
 
 //        firebaseAuth = FirebaseAuth.getInstance();
 //        firebaseUser = firebaseAuth.getCurrentUser();

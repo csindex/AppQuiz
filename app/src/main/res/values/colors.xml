@@ -8,7 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-
     <color name="orange">#FD7702</color>
-    <color name="blue">#003f7d</color>
+    <color name="blue">#003F7D</color>
+
+    <color name="baby_squid_white">#FDF4FE</color>
+    <color name="baby_squid_red">#E43D83</color>
+    <color name="children_yellow">#EBCE97</color>
 </resources>
