@@ -25,13 +25,13 @@ import java.util.Date;
 
 public class ScoresActivity extends AppCompatActivity {
     private static ArrayList<Score> scoreArrayList = new ArrayList<>();
-    FirebaseAuth firebaseAuth;
-    FirebaseUser firebaseUser;
+//    FirebaseAuth firebaseAuth;
+//    FirebaseUser firebaseUser;
     String email;
     SimpleDateFormat simpleDateFormat;
     Date date;
     Score score;
-    DatabaseReference databaseReference;
+//    DatabaseReference databaseReference;
     ScoreAdapter scoreAdapter;
     ListView lvScore;
     ProgressDialog progressDialog;
@@ -40,11 +40,11 @@ public class ScoresActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scores);
-        firebaseAuth = FirebaseAuth.getInstance();
-        firebaseUser = firebaseAuth.getCurrentUser();
-        email = firebaseUser.getEmail();
+//        firebaseAuth = FirebaseAuth.getInstance();
+//        firebaseUser = firebaseAuth.getCurrentUser();
+        email = "test@email.com";//firebaseUser.getEmail();
         lvScore = findViewById(R.id.lvScores);
-        databaseReference = FirebaseDatabase.getInstance().getReference("scores");
+//        databaseReference = FirebaseDatabase.getInstance().getReference("scores");
         scoreAdapter = new ScoreAdapter(this, scoreArrayList);
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Please wait...");
@@ -56,7 +56,7 @@ public class ScoresActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        /*databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
@@ -96,6 +96,6 @@ public class ScoresActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        });
+        });*/
     }
 }
