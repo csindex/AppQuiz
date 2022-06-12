@@ -1,22 +1,21 @@
 package com.example.appquiz;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
+
+import java.util.concurrent.atomic.AtomicReference;
 
 public class MainActivity2 extends AppCompatActivity {
     TextView tvName;
@@ -87,6 +86,41 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
     }*/
+
+    @SuppressLint({"InflateParams", "SetTextI18n"})
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View content = inflater.inflate(R.layout.layout_dialog, null);
+        builder.setView(content);
+        AlertDialog dialog = builder.create();
+        TextView title = content.findViewById(R.id.label_title);
+        title.setText("Confirm Exit");
+        TextView message = content.findViewById(R.id.label_message);
+        message.setText("Are you sure you want to exit?");
+        TextView pBtn = content.findViewById(R.id.btn_positive);
+        pBtn.setText("Yes");
+        pBtn.setOnClickListener(view -> {
+            this.finishAndRemoveTask();
+            System.exit(0);
+        });
+        TextView nBtn = content.findViewById(R.id.btn_negative);
+        nBtn.setText("No");
+        nBtn.setOnClickListener(view -> {
+            try {
+                dialog.dismiss();
+            } catch (Exception e) {
+                // TODO: do something
+            }
+        });
+        try {
+            dialog.show();
+        } catch (Exception e) {
+            // TODO: do something
+        }
+//        super.onBackPressed();
+    }
 
     public void goToProfile(View view) {
         startActivity(new Intent(this, ProfileActivity.class));

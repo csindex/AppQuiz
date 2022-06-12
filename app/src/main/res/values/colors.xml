@@ -13,5 +13,8 @@
 
     <color name="baby_squid_white">#FDF4FE</color>
     <color name="baby_squid_red">#E43D83</color>
+    <color name="baby_squid_red_outline">#D34687</color>
+    <color name="baby_squid_red_gradient_end">#EC5244</color>
+    <color name="baby_squid_red_gradient_pressed_start">#C02A54</color>
     <color name="children_yellow">#EBCE97</color>
 </resources>

@@ -9,5 +9,9 @@
     <string name="back">back</string>
     <string name="label_welcome">Welcome\nto\nSquids\nGame</string>
     <string name="btn_label_start">Start</string>
+    <string name="sample_title">Sample Title</string>
+    <string name="sample_message">\t\tThis is a sample message.</string>
+    <string name="sample_label_btn_negative">Cancel</string>
+    <string name="sample_label_btn_positive">Okay</string>
 
 </resources>
