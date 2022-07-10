@@ -23,6 +23,7 @@
         android:textSize="24sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bbg"
         android:id="@+id/tvScore"/>
     <Button
         android:layout_margin="8dp"

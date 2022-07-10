@@ -13,5 +13,11 @@
     <string name="sample_message">\t\tThis is a sample message.</string>
     <string name="sample_label_btn_negative">Cancel</string>
     <string name="sample_label_btn_positive">Okay</string>
+    <string name="label_btn_search">Search</string>
+    <string name="label_title">Hello, what would you want to search?</string>
+    <string name="label_search_hint">Enter word here...</string>
+    <string name="label_header">Getting meaning</string>
+    <string name="label_sub_header">Please wait...</string>
+    <string name="sample_correct">Your answer is CORRECT!</string>
 
 </resources>

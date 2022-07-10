@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog"
+        android:layout_margin="20dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_letter"
+            android:layout_width="260dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_positive"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintVertical_bias="0"
+            app:srcCompat="@drawable/al"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:id="@+id/btn_negative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/btn_positive"
+            app:layout_constraintEnd_toStartOf="@+id/btn_positive"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_positive"
+            app:layout_constraintHorizontal_bias="1"
+            tools:text="@string/sample_label_btn_negative"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:textColor="@color/children_yellow" />
+
+        <TextView
+            android:id="@+id/btn_positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_letter"
+            app:layout_constraintHorizontal_bias="1"
+            tools:text="@string/sample_label_btn_positive"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:textColor="@color/baby_squid_red_gradient_end"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="0"
+        app:srcCompat="@drawable/baby_squid_st"
+        android:scaleType="fitCenter"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

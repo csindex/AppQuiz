@@ -19,34 +19,34 @@ public class GlobalVariables extends Application {
         addTest();
     }
     private void addTest(){
-        Test t1 = new Test(R.drawable.sight,"a","What is this sense?","Sight","Smell");
-        Test t2 = new Test(R.drawable.smell,"b","What is this sense?","Sight","Smell");
-        Test t3 = new Test(R.drawable.touch,"b","What is this sense?","Hear","Touch");
-        Test t4 = new Test(R.drawable.taste,"a","What is this sense?","Taste","Touch");
-        Test t5 = new Test(R.drawable.hear,"a","What is this sense?","Hear","Touch");
+        Test t1 = new Test(R.drawable.eye,"a","What is this sense?","Sight","Smell");
+        Test t2 = new Test(R.drawable.nose2,"b","What is this sense?","Sight","Smell");
+        Test t3 = new Test(R.drawable.hand2,"b","What is this sense?","Hear","Touch");
+        Test t4 = new Test(R.drawable.tongue2,"a","What is this sense?","Taste","Touch");
+        Test t5 = new Test(R.drawable.ear_2,"a","What is this sense?","Hear","Touch");
 
         Test t6 = new Test(0,"a","What comes after A?","B","C");
         Test t7 = new Test(0,"a","What comes after X?","Y","Z");
         Test t8 = new Test(0,"b","What comes after S?","R","T");
         Test t9 = new Test(0,"a","What comes after T?","U","V");
-        Test t10 = new Test(0,"b","What comes after 5?","U","W");
+        Test t10 = new Test(0,"b","What comes after V?","U","W");
 
-        Test t11 = new Test(0,"a","What comes after 23?","24","22");
-        Test t12 = new Test(0,"a","What comes after 44?","45","43");
-        Test t13 = new Test(0,"b","What comes after 67?","66","68");
-        Test t14 = new Test(0,"a","What comes after 225?","226","224");
-        Test t15 = new Test(0,"b","What comes after 990?","989","991");
+        Test t11 = new Test(0,"a","What is 2 + 2?","4","22");
+        Test t12 = new Test(0,"a","What is 50 + 50?","100","55");
+        Test t13 = new Test(0,"b","What is 10 + 20?","12","30");
+        Test t14 = new Test(0,"a","What is 5 + 6?","11","56");
+        Test t15 = new Test(0,"b","What is 23 + 12?","45","35");
+        Test t16 = new Test(0,"a","What is 45 - 14?","31","41");
+        Test t17 = new Test(0,"a","What is 50 - 10?","40","49");
+        Test t18 = new Test(0,"b","What is 10 - 4?","14","6");
+        Test t19 = new Test(0,"a","What is 99 - 9?","90","98");
+        Test t20 = new Test(0,"b","What is 66 - 11?","65","55");
 
-        Test t16 = new Test(R.drawable.nose,"a","What is this?","Nose","Ears");
-        Test t17 = new Test(R.drawable.elbow,"b","What is this?","Nose","Elbow");
-        Test t18 = new Test(R.drawable.ear,"a","What is this?","Ear","Elbow");
-        Test t19 = new Test(R.drawable.hair,"b","What is this?","Ear","Hair");
-        Test t20 = new Test(R.drawable.nail,"a","What is this?","Nail","Hair");
-        Test t21 = new Test(R.drawable.eyes,"b","What is this?","Nail","Eyes");
-        Test t22 = new Test(R.drawable.nose,"a","What is this?","Nose","Eyes");
-        Test t23 = new Test(R.drawable.tongue,"b","What is this?","Nose","Tongue");
-        Test t24 = new Test(R.drawable.lips,"a","What is this?","Lips","Tongue");
-        Test t25 = new Test(R.drawable.hand,"b","What is this?","Lips","Hand");
+        Test t21 = new Test(R.drawable.eye,"b","What is this?","Nail","Eyes");
+        Test t22 = new Test(R.drawable.nose2,"a","What is this?","Nose","Eyes");
+        Test t23 = new Test(R.drawable.tongue2,"b","What is this?","Nose","Tongue");
+        Test t24 = new Test(R.drawable.lip,"a","What is this?","Lips","Tongue");
+        Test t25 = new Test(R.drawable.hand2,"b","What is this?","Lips","Hand");
 
         testArrayList.add(t1);
         testArrayList.add(t2);
@@ -79,22 +79,22 @@ public class GlobalVariables extends Application {
         return testArrayList;
     }
     private void addSenses(){
-        Lesson s1 = new Lesson("Tongue for Taste",R.drawable.taste);
+        Lesson s1 = new Lesson("Tongue for Taste",R.drawable.tongue2);
         sensesArrayList.add(s1);
-        Lesson s2 = new Lesson("Ears for Hearing",R.drawable.hear);
+        Lesson s2 = new Lesson("Ears for Hearing",R.drawable.ear_2);
         sensesArrayList.add(s2);
-        Lesson s3 = new Lesson("Eyes for Sight",R.drawable.sight);
+        Lesson s3 = new Lesson("Eyes for Sight",R.drawable.eye);
         sensesArrayList.add(s3);
-        Lesson s4 = new Lesson("Nose for Smell",R.drawable.smell);
+        Lesson s4 = new Lesson("Nose for Smell",R.drawable.nose2);
         sensesArrayList.add(s4);
-        Lesson s5 = new Lesson("Skin for Touch",R.drawable.touch);
+        Lesson s5 = new Lesson("Skin for Touch",R.drawable.hand2);
         sensesArrayList.add(s5);
     }
     public ArrayList<Lesson> getSenses(){
         return sensesArrayList;
     }
     private void addNumbers(){
-        for(int i = 1;i<101;i++){
+        for(int i = 1; i < 101 ;i++){
             Lesson lesson = new Lesson(String.valueOf(i));
             numbersArrayList.add(lesson);
         }
@@ -103,57 +103,57 @@ public class GlobalVariables extends Application {
         return numbersArrayList;
     }
     private void addAlphabets() {
-        Lesson a = new Lesson("a");
+        Lesson a = new Lesson("a for apple", R.drawable.al);
         alphabetsArrayList.add(a);
-        Lesson b = new Lesson("b");
+        Lesson b = new Lesson("b for ball", R.drawable.bl);
         alphabetsArrayList.add(b);
-        Lesson c = new Lesson("c");
+        Lesson c = new Lesson("c for cat", R.drawable.cl);
         alphabetsArrayList.add(c);
-        Lesson d = new Lesson("d");
+        Lesson d = new Lesson("d for dog", R.drawable.dl);
         alphabetsArrayList.add(d);
-        Lesson e = new Lesson("e");
+        Lesson e = new Lesson("e for egg", R.drawable.el);
         alphabetsArrayList.add(e);
-        Lesson f = new Lesson("f");
+        Lesson f = new Lesson("f for fish", R.drawable.fl);
         alphabetsArrayList.add(f);
-        Lesson g = new Lesson("g");
+        Lesson g = new Lesson("g for goat", R.drawable.gl);
         alphabetsArrayList.add(g);
-        Lesson h = new Lesson("h");
+        Lesson h = new Lesson("h for hat", R.drawable.hl);
         alphabetsArrayList.add(h);
-        Lesson i = new Lesson("i");
+        Lesson i = new Lesson("i igloo", R.drawable.il);
         alphabetsArrayList.add(i);
-        Lesson j = new Lesson("j");
+        Lesson j = new Lesson("j for jam", R.drawable.jl);
         alphabetsArrayList.add(j);
-        Lesson k = new Lesson("k");
+        Lesson k = new Lesson("k for king", R.drawable.kl);
         alphabetsArrayList.add(k);
-        Lesson l = new Lesson("l");
+        Lesson l = new Lesson("l for lion", R.drawable.ll);
         alphabetsArrayList.add(l);
-        Lesson m = new Lesson("m");
+        Lesson m = new Lesson("m for moon", R.drawable.ml);
         alphabetsArrayList.add(m);
-        Lesson n = new Lesson("n");
+        Lesson n = new Lesson("n for nut", R.drawable.nl);
         alphabetsArrayList.add(n);
-        Lesson o = new Lesson("o");
+        Lesson o = new Lesson("o for orange", R.drawable.ol);
         alphabetsArrayList.add(o);
-        Lesson p = new Lesson("p");
+        Lesson p = new Lesson("p for pig", R.drawable.pl);
         alphabetsArrayList.add(p);
-        Lesson q = new Lesson("q");
+        Lesson q = new Lesson("q for queen", R.drawable.ql1);
         alphabetsArrayList.add(q);
-        Lesson r = new Lesson("r");
+        Lesson r = new Lesson("r for rocket", R.drawable.rl);
         alphabetsArrayList.add(r);
-        Lesson s = new Lesson("s");
+        Lesson s = new Lesson("s for sun", R.drawable.sl);
         alphabetsArrayList.add(s);
-        Lesson t = new Lesson("t");
+        Lesson t = new Lesson("t for tree", R.drawable.tl);
         alphabetsArrayList.add(t);
-        Lesson u = new Lesson("u");
+        Lesson u = new Lesson("u for umbrella", R.drawable.ul);
         alphabetsArrayList.add(u);
-        Lesson v = new Lesson("v");
+        Lesson v = new Lesson("v for van", R.drawable.vl);
         alphabetsArrayList.add(v);
-        Lesson w = new Lesson("w");
+        Lesson w = new Lesson("w for watch", R.drawable.wl);
         alphabetsArrayList.add(w);
-        Lesson x = new Lesson("x");
+        Lesson x = new Lesson("x for fox", R.drawable.xl);
         alphabetsArrayList.add(x);
-        Lesson y = new Lesson("y");
+        Lesson y = new Lesson("y for yo-yo", R.drawable.yl);
         alphabetsArrayList.add(y);
-        Lesson z = new Lesson("z");
+        Lesson z = new Lesson("z for zip", R.drawable.zl);
         alphabetsArrayList.add(z);
     }
 

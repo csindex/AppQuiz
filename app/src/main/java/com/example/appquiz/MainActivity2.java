@@ -2,29 +2,28 @@ package com.example.appquiz;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DatabaseReference;
-
-import java.util.concurrent.atomic.AtomicReference;
 
 public class MainActivity2 extends AppCompatActivity {
     TextView tvName;
 //    FirebaseUser firebaseUser;
 //    FirebaseAuth firebaseAuth;
     ProgressDialog progressDialog;
-    DatabaseReference databaseReference;
+//    DatabaseReference databaseReference;
 //    String email;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,12 +50,42 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void goToScores(View view) {
-        startActivity(new Intent(this, ScoresActivity.class));
+//        startActivity(new Intent(this, ScoresActivity.class));
+        SharedPreferences prefs = this.getSharedPreferences("score_prefs", Context.MODE_PRIVATE);
+        String score = prefs.getString("score", "Please answer quiz first.");
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View content = inflater.inflate(R.layout.layout_dialog, null);
+        builder.setView(content);
+        AlertDialog dialog = builder.create();
+        TextView title = content.findViewById(R.id.label_title);
+        title.setText("Here is your score");
+        TextView message = content.findViewById(R.id.label_message);
+        message.setText(score);
+        TextView pBtn = content.findViewById(R.id.btn_positive);
+        pBtn.setText("Okay");
+        pBtn.setOnClickListener(v -> {
+            dialog.dismiss();
+        });
+//        TextView nBtn = content.findViewById(R.id.btn_negative);
+//        nBtn.setText("No");
+//        nBtn.setOnClickListener(v -> {
+//            try {
+//                dialog.dismiss();
+//            } catch (Exception e) {
+//                // TODO: do something
+//            }
+//        });
+        try {
+            dialog.show();
+        } catch (Exception e) {
+            // TODO: do something
+        }
     }
 
-    public void goToDictionary(View view) {
-        startActivity(new Intent(this, DictionaryActivity.class));
-    }
+//    public void goToDictionary(View view) {
+//        startActivity(new Intent(this, DictionaryActivity.class));
+//    }
 
     /*public void getUser() {
 
@@ -121,8 +150,10 @@ public class MainActivity2 extends AppCompatActivity {
         }
 //        super.onBackPressed();
     }
-
+/*
     public void goToProfile(View view) {
         startActivity(new Intent(this, ProfileActivity.class));
     }
+
+ */
 }

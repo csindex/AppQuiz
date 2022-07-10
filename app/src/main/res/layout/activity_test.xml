@@ -91,6 +91,7 @@
         android:textColor="@color/white"
         android:text="choice 1"
         android:textSize="30sp"
+        android:fontFamily="@font/bbg"
         android:id="@+id/btnChoice1"
         android:onClick="choice1"/>
 
@@ -102,6 +103,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:text="choice 2"
+        android:fontFamily="@font/bbg"
         android:textSize="30sp"
         android:id="@+id/btnChoice2"
         android:onClick="choice2"

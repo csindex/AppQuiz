@@ -33,6 +33,7 @@
         android:text="@string/label_welcome"
         android:textSize="48sp"
         android:textAlignment="center"
+
         />
 
     <androidx.appcompat.widget.AppCompatButton

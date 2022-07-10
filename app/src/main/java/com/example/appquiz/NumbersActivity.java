@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.speech.tts.TextToSpeech;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -14,6 +15,7 @@ import com.example.appquiz.classes.GlobalVariables;
 import com.example.appquiz.classes.Lesson;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class NumbersActivity extends AppCompatActivity {
     private static ArrayList<Lesson> alphabetsArrayList = new ArrayList<>();
@@ -25,6 +27,7 @@ public class NumbersActivity extends AppCompatActivity {
     int span = 0;
     ProgressDialog progressDialog;
     private NumbersAdapter myAdapter;
+    private TextToSpeech tts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,26 +39,28 @@ public class NumbersActivity extends AppCompatActivity {
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
         Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
+        handler.postDelayed(() -> progressDialog.dismiss(), 1000);
 
-                progressDialog.dismiss();
+        tts = new TextToSpeech(getApplicationContext(), i -> {
+            if (i != TextToSpeech.ERROR) {
+                tts.setLanguage(Locale.UK);
             }
-        }, 1000);
+        });
 
         Intent intent = getIntent();
         String lesson = intent.getStringExtra("lesson");
         GlobalVariables globalVariables = (GlobalVariables) this.getApplication();
+        boolean isNumbers = true;
 
         if (lesson.equalsIgnoreCase("numbers")) {
             numbersArrayList = globalVariables.getNumbers();
         } else {
             numbersArrayList = globalVariables.getAlphabets();
+            isNumbers = false;
         }
 
         recyclerView = findViewById(R.id.rv);
-        myAdapter = new NumbersAdapter(this, numbersArrayList);
+        myAdapter = new NumbersAdapter(this, numbersArrayList, isNumbers, tts);
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(gridLayoutManager);
