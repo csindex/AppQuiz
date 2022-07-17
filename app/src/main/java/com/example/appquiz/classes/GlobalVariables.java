@@ -149,7 +149,7 @@ public class GlobalVariables extends Application {
         alphabetsArrayList.add(v);
         Lesson w = new Lesson("w for watch", R.drawable.wl);
         alphabetsArrayList.add(w);
-        Lesson x = new Lesson("x for fox", R.drawable.xl);
+        Lesson x = new Lesson("x for x-ray", R.drawable.xl1);
         alphabetsArrayList.add(x);
         Lesson y = new Lesson("y for yo-yo", R.drawable.yl);
         alphabetsArrayList.add(y);
